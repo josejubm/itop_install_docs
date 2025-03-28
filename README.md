@@ -282,6 +282,9 @@ sudo systemctl restart httpd
 > [!CAUTION]
 > SI ALGO NO FUNCIONA REVISAR **SELINUX**
 
+- en este punto ya veriamos el instalador de itop
+  ![imagen del instalador de itop](./itop_test.png)
+
 ## Configuracion
 
 
