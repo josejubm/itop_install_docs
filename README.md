@@ -41,26 +41,43 @@ Algunas de las funcionalidades clave incluyen:
 
 
 
-## Requisitos Previos Generales 
+## Dependecias
 
-| **Componente**         | **Requisito Mínimo**                          | **Recomendado**                          |
-|------------------------|----------------------------------------------|------------------------------------------|
-| **Servidor Web**       | Apache, Nginx                                | Apache 2.4+                              |
-| **PHP**                | PHP 7.4 o superior                           | PHP 8.0 o superior                       |
-| **Extensiones PHP**    | `mysqli`, `mbstring`, `gd`, `xml`, `json`, `curl` | Igual o más extensiones si necesario    |
-| **Base de Datos**      | MySQL 5.7+ o MariaDB 10.3+                   | MySQL 8.0 o MariaDB más reciente         |
-| **Espacio en Disco**   | 500 MB                                       | 1 GB (con datos adicionales)             |
-| **RAM**                | 2 GB                                         | 4 GB o más, especialmente en producción  |
-| **Sistema Operativo**  | Linux (Ubuntu/Debian/CentOS) o Windows       | Linux (Ubuntu 20.04+)                    |
+# **Dependencias para la Instalación de iTop**  
+
+| **Componente**            | **Descripción**                                                                 |
+|---------------------------|---------------------------------------------------------------------------------|
+| **PHP**                    | Versión 7.4 o superior. Requiere varias extensiones.                            |
+| **Extensiones PHP**        | - `mysqli` (para la base de datos MySQL/MariaDB)                               |
+|                           | - `mbstring` (para manejar cadenas multibyte)                                  |
+|                           | - `gd` (para manipulación de imágenes, útil para los informes)                |
+|                           | - `xml` (para procesamiento de XML)                                           |
+|                           | - `json` (para manipulación de datos JSON)                                     |
+|                           | - `curl` (para realizar solicitudes HTTP desde PHP)                            |
+| **Base de Datos**          | - **MySQL** 5.7 o superior o **MariaDB** 10.3 o superior.                      |
+| **Servidor Web**           | - **Apache** (2.4 o superior) o **Nginx**                                        |
+| **Servidor de correo**     | - Para enviar correos electrónicos (opcional para notificaciones)               |
+| **Comando `composer`**     | Herramienta de gestión de dependencias de PHP. Necesaria para gestionar dependencias de iTop. |
+| **Cron**                   | Para programar tareas de mantenimiento y limpieza de la base de datos (opcional). |
 
 ---
 
-
-## Dependecias
-
+> [!NOTE]
+>### **Importante:**
+>- **PHP:** Asegúrate de que todas las extensiones estén habilitadas antes de la instalación. Si alguna falta, iTop podría no funcionar correctamente.
+> - **Base de Datos:** La base de datos de iTop debe estar configurada antes de comenzar la instalación.  
+> - **Servidor Web:** Se recomienda Apache, ya que es compatible y tiene una configuración más sencilla con iTop.
 
 
 ## Instalacion de Dependencias
+
+### MariaDB
+
+#### Paso 1 instalacion
+```bash
+sudo dnf install -y mariadb-server mariadb
+```
+#### Paso 2 configuracion
 
 
 ### MYSQL
